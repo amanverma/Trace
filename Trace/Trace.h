@@ -7,9 +7,9 @@
 namespace RayTracing
 {
 	//struct point{float x; float y; float z;};
-	struct material{float red; float green; float blue;	float reflectance;};
+	struct material{color diffuse; color specular; float power;float reflectance;};
 	struct sphere{float radius;	point center; int materialId;};
-	struct lightSource{point position; float red; float green; float blue;};
+	struct lightSource{point position; color intensity;};
 	struct ray{point startPosition; vecteur direction;};
 	struct scene
 	{std::vector<material> materialContainer;
